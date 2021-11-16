@@ -1,1 +1,1 @@
-window.BACKEND_URL = 'http://backend.hetjagani.workers.dev';
+window.BACKEND_URL = 'https://backend.hetjagani.workers.dev';
