@@ -38,9 +38,6 @@ function App() {
   const [title, setTitle] = useState('');
   const [content, setContent] = useState('');
   const [username, setUsername] = useState('');
-  const [render, setRender] = useState(false);
-
-  useEffect(() => {}, [render]);
 
   const createPost = () => {
     const data = { title, content, username };
@@ -49,8 +46,7 @@ function App() {
       .post(`${window.BACKEND_URL}/posts`, data)
       .then((res) => {
         console.log(res.data);
-        setRender(!render);
-        setOpen(false);
+        window.location.reload(true);
       })
       .catch((err) => console.error(err));
   };
